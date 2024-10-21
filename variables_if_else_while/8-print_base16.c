@@ -9,12 +9,18 @@ int main(void)
 {
 	int n;
 
-	n = 0x0;
-	while (n <= 0xf)
+	n = 48;
+	while (n < 58)
 	{
-		printf("%x", n);
+		putchar(n);
 		n++;
 	}
-	printf("\n");
+	n = 97;
+	while (n < 103)
+	{
+		putchar(n);
+		n++;
+	}
+	putchar(10);
 	return (0);
 }
