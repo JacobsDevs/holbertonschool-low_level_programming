@@ -17,6 +17,7 @@ int main(void)
 	while (i < 50)
 	{
 		unsigned long int tmp;
+
 		if (i < 49)
 			printf("%lu, ", j);
 		else
@@ -26,6 +27,5 @@ int main(void)
 		j = tmp;
 		i++;
 	}
-	putchar(10);
 	return (0);
 }
