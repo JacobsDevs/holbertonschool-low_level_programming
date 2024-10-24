@@ -8,20 +8,10 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 
-void print_alphabet(void)
+int main(void)
 {
-	int i;
-	i = 97;
-	while (i < 123)
-	{
-		_putchar(i);
-		i++;
-	}
-	_putchar('\n');
+	print_alphabet();
+	return (0);
 }
 

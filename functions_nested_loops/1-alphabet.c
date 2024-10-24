@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "main.h"
 
 /**
@@ -7,8 +8,16 @@
  * Return: 0 - No error
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	int i;
+	i = 97;
+
+	while (i < 123)
+	{
+		_putchar(i);
+		i++;
+	}
+	_putchar('\n');
 }
+
