@@ -17,8 +17,10 @@ int main(void)
 	while (i < 50)
 	{
 		unsigned long int tmp;
-
-		printf("%lu, ", j);
+		if (i < 49)
+			printf("%lu, ", j);
+		else
+			printf("%lu\n", j);
 		tmp = k;
 		k = j + k;
 		j = tmp;
