@@ -2,17 +2,16 @@
 #include "main.h"
 
 /**
- * main - Uses print_alphabet to display "_putchar" to the terminal followed by
- * newline without the use of any stdlibs
- *
+ * print_alphabet - Uses _putchar and a while loop to print the alphabet
+ * from ascii values.
  * Return: 0 - No error
  */
 
 void print_alphabet(void)
 {
 	int i;
+	
 	i = 97;
-
 	while (i < 123)
 	{
 		_putchar(i);
