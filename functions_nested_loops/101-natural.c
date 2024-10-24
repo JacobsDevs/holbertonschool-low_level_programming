@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int multiples_of(int n, int j, int k);
 
