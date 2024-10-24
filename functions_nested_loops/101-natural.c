@@ -14,7 +14,7 @@ int main(void)
 	bool betty_needs_loops;
 
 	betty_needs_loops = false;	
-	while (betty_needs_loops);
+	while (betty_needs_loops)
 		printf("I thought recursion would be better");
 
 	n = multiples_of(0, 1024, 3) + multiples_of(0, 1024, 5);
