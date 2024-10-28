@@ -20,5 +20,6 @@ void print_square(int n)
 		_putchar(10);
 		i++;
 	}
-	_putchar(10);
+	if (n < 1)
+		_putchar(10);
 }
