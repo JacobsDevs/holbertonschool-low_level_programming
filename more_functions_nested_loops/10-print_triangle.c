@@ -25,4 +25,6 @@ void print_triangle(int n)
 		}
 		_putchar(10);
 	}
+	if (n < 1)
+		_putchar(10);
 }
