@@ -14,7 +14,7 @@ int _atoi(char *s)
 	i = 0;
 	posneg = 0;
 
-	while (s[i] < 48 || s[i] > 57)
+	while ((s[i] < 48 || s[i] > 57) && s[i] != '\0')
 	{
 		if (s[i] == '+')
 			posneg++;
@@ -29,8 +29,13 @@ int _atoi(char *s)
 		num += (s[i] - 48);
 		i++;
 	}
-	if (posneg < 0)
-		return (num * -1);
+	if (num > 0)
+	{
+		if (posneg < 0)
+			return (num * -1);
+		else
+			return (num);
+	}
 	else
-		return (num);
+		return (0);
 }
