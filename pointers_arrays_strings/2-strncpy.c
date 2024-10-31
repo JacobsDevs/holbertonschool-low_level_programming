@@ -20,7 +20,10 @@ char *_strncpy(char *dest, char *src, int n)
 		else if (evalsrclen == 1)
 			dest[i] = 0;
 		else
+		{
+			dest[i] = 0;
 			evalsrclen = 1;
+		}
 		i++;
 	}
 	return (dest);
