@@ -1,5 +1,5 @@
 /**
- * strncpy - Copy n characters from src to dest
+ * _strncpy - Copy n characters from src to dest
  * @dest: Location to copy to
  * @src: Location to copy from
  * @n: Amount of characters to copy
