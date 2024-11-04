@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * _memset - Fills the first n bytes of memory starting at s with the constant
  * b
