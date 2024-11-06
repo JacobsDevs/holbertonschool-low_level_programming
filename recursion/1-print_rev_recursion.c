@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * _puts_recursion - Recursively uses putchar to print a string to the terminal
+ * _print_rev_recursion - Recursively uses putchar to print a string to the
+ * terminal
  * @s: Pointer to the start of the string to print
  */
 
