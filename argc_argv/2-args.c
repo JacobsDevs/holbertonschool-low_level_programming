@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Print the name of the file to the screen
+ * main - Print all arguments including file name to the screen
  * @argc: Count of CL arguments
  * @argv: Array of CL arguments
  *
