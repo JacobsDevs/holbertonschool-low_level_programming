@@ -1,5 +1,5 @@
 /**
- * _pow_recursion: Return x raised to the power of y
+ * _pow_recursion - Return x raised to the power of y
  * @x: The base number
  * @y: The exponent
  *
