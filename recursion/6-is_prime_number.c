@@ -14,11 +14,7 @@ int prime_search(int n, int i)
 	if (i == 0)
 		return (0);
 	else if (n % i == 0)
-	{
-		printf("Found: %d is divisible by %d\n", n, i);
 		primer = 1;
-
-	}
 	return (primer + prime_search(n, i - 1));
 }
 
@@ -31,7 +27,8 @@ int prime_search(int n, int i)
 
 int is_prime_number(int n)
 {
-	printf("Number is %d\n\n", n);
+	if (n <= 1)
+		return (0);
 	if (prime_search(n, (n / 2 + 1)) == 1)
 		return (1);
 	else
