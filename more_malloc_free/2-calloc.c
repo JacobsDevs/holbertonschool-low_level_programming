@@ -1,5 +1,5 @@
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * _calloc - returns allocated memory of size nmemb * size set to 0
  * @nmemb: Number of elements
@@ -10,18 +10,24 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *array;
-	unsigned int i = 0;
+	int *array;
+	unsigned int i;
+	int len = nmemb * size;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	array = malloc(nmemb * size + (sizeof(char)));
+	
+	array = malloc(len + size);
+	
 	if (array == NULL)
 		return (NULL);
-	while (i < nmemb)
+	i = 0;
+	
+	while (array[i] != '\0')
 	{
 		array[i] = 0;
 		i++;
 	}
+	
 	return (array);
 }
