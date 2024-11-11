@@ -11,7 +11,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *array;
-	unsigned int i;
+	int i;
 	int len = nmemb * size;
 
 	if (nmemb == 0 || size == 0)
