@@ -11,19 +11,19 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *array;
-	int i;
+	unsigned int i;
 	int len = nmemb * size;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	
-	array = malloc(len + size);
+	array = malloc(len);
 	
 	if (array == NULL)
 		return (NULL);
 	i = 0;
 	
-	while (array[i] != '\0')
+	while (i < (nmemb * size))
 	{
 		array[i] = 0;
 		i++;
