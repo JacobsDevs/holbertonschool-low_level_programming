@@ -12,10 +12,47 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *pup = malloc(sizeof(struct dog));
-	if (pup == NULL)
+	char *namecpy = malloc(sizeof(char) * get_length(name));
+	char *ownercpy = malloc(sizeof(char) * get_length(owner));
+	int i = 0;
+
+	if (pup == NULL || namecpy == NULL || ownercpy == NULL)
+	{
+		free(pup);
+		free(namecpy);
+		free(ownercpy);
 		return (NULL);
-	pup->name = name;
+	}
+
+	while (i < get_length(name))
+	{
+		namecpy[i] = name[i];
+		i++;
+	}
+	i = 0;
+	while (i < get_length(owner))
+	{
+		ownercpy[i] = owner[i];
+		i++;
+	}
+	pup->name = namecpy;
 	pup->age = age;
-	pup->owner = owner;
+	pup->owner = ownercpy;
 	return (pup);
+}
+
+/**
+ * get_length - returns the length of characters in a string
+ * @string: The string to measure.
+ *
+ * Return: The length of the string or NULL if string inapproporiate.
+ */
+
+int get_length(char *string)
+{
+	int i = 0;
+
+	while (string[i] != '\0')
+		i++;
+	return (i + 1);
 }
