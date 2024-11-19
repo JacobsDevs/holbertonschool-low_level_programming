@@ -19,12 +19,11 @@ int main(int argv, char *argc[])
 	if (argv != 4)
 	{
 		printf("Error\n");
-		printf("%d", argv);
 		exit(98);
 	}
-	int num1 = atoi(argc[1]);
-	char *operator = argc[2];
-	int num2 = atoi(argc[3]);
+	num1 = atoi(argc[1]);
+	operator = argc[2];
+	num2 = atoi(argc[3]);
 	func_ptr = get_op_func(operator);
 	if (func_ptr == NULL)
 	{
