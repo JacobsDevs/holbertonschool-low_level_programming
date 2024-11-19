@@ -13,7 +13,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list ap;
 	
 	if (n == 0)
+	{
+		printf("\n");
 		return;
+	}
 	va_start(ap, n);
 	while (i < n - 1)
 	{
