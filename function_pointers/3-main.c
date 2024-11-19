@@ -12,9 +12,9 @@
 int main(int argv, char *argc[])
 {
 	int (*func_ptr)(int a, int b);
-	int num1 = atoi(argc[1]);
-	char *operator = argc[2];
-	int num2 = atoi(argc[3]);
+	int num1;
+	char *operator;
+	int num2;
 
 	if (argv != 4)
 	{
@@ -22,6 +22,9 @@ int main(int argv, char *argc[])
 		printf("%d", argv);
 		exit(98);
 	}
+	int num1 = atoi(argc[1]);
+	char *operator = argc[2];
+	int num2 = atoi(argc[3]);
 	func_ptr = get_op_func(operator);
 	if (func_ptr == NULL)
 	{
