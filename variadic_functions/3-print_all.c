@@ -30,7 +30,6 @@ void print_all(char *ptypes, ...)
 		}
 		i++;
 	}
-	printf("\n");
 }
 
 /**
