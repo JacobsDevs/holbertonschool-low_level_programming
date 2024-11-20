@@ -24,10 +24,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		p = va_arg(ap, char *);
 		if (p == NULL)
 			p = "(nil)";
-		if (separator == NULL)
-			printf("%s", p);
-		else if (i == n - 1)
+		if (i == n - 1)
 			printf("%s\n", p);
+		else if (separator == NULL)
+			printf("%s", p);
 		else
 			printf("%s%s", p, separator);
 		i++;
