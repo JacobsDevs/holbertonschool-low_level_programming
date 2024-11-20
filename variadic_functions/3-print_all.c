@@ -18,16 +18,15 @@ void print_all(char *ptypes, ...)
 	while (ptypes[i] != '\0')
 	{
 		func_ptr = get_parser_func(ptypes[i]);
-		if (func_ptr != NULL)
+		if (func_ptr != NULL && ptypes[i + 1] != '\0')
 		{
 			func_ptr(apptr);
-			if (ptypes[i + 1] == '\0')
-				printf("\n");
-			else
-				printf(", ");
+			printf(", ");
 		}
 		i++;
 	}
+	func_ptr(apptr);
+	printf("\n");
 }
 
 /**
