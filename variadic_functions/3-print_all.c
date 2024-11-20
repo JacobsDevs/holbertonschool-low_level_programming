@@ -55,6 +55,8 @@ int (*get_parser_func(char s))(va_list *ap)
 /**
  * print_char - Prints a char to the screen
  * @ap: va_list to read
+ *
+ * Return: 0 if ok.
  */
 
 int print_char(va_list *ap)
@@ -66,6 +68,8 @@ int print_char(va_list *ap)
 /**
  * print_int - Prints an int to the screen
  * @ap: va_list to read
+ *
+ * Return: 0 if ok.
  */
 
 int print_int(va_list *ap)
@@ -77,6 +81,8 @@ int print_int(va_list *ap)
 /**
  * print_float - Prints a float to the screen
  * @ap: va_list to read
+ *
+ * Return: 0 if ok.
  */
 
 int print_float(va_list *ap)
@@ -88,6 +94,8 @@ int print_float(va_list *ap)
 /**
  * print_string - Prints a string to the screen
  * @ap: va_list to read
+ *
+ * Return: 0 if ok.
  */
 
 int print_string(va_list *ap)

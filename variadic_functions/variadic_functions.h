@@ -7,9 +7,13 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(char *ptypes, ...);
 /**
- * struct parser
+ * struct parser - has a string key and function pointer
  * @ptype: The type to parse
  * @f: The function associated
+ *
+ * Description: For use with get_parser_function.  It is passed a character
+ * and if the character matches one of the keys in the struct array
+ * returns a function pointer to print that type.
  */
 typedef struct parser
 {
