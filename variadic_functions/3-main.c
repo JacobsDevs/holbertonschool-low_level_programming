@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-
+#include <stdlib.h>
 /**
  * main - check the code
  *
@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	print_all("t");
+	print_all(NULL);
     	return (0);
 }

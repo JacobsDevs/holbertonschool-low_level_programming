@@ -15,7 +15,7 @@ void print_all(char *ptypes, ...)
 	void (*func_ptr)(va_list *apptr);
 
 	va_start(ap, ptypes);
-	while (ptypes[i] != '\0' && ptypes != NULL)
+	while (ptypes != NULL && ptypes[i] != '\0')
 	{
 		func_ptr = get_parser_func(ptypes[i]);
 		if (func_ptr != NULL && ptypes[i + 1] != '\0')
