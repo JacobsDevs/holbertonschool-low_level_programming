@@ -26,10 +26,10 @@ void print_all(char *ptypes, ...)
 		if (func_ptr != NULL && ptypes[i + 1] == '\0')
 		{
 			func_ptr(apptr);
-			printf("\n");
 		}
 		i++;
 	}
+	printf("\n");
 }
 
 /**
