@@ -14,7 +14,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(ap, n);
 	if (n == 0)
+	{
+		printf("\n");
 		return;
+	}
 	while (i < n - 1)
 	{
 		if (separator == NULL)
