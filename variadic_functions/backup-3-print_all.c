@@ -12,13 +12,13 @@ void print_all(char *ptypes, ...)
 	va_list ap;
 	va_list *apptr = &ap;
 	int i = 0;
-	int (*func_ptr)(va_list *apptr);
+	void (*func_ptr)(va_list *apptr);
 
 	va_start(ap, ptypes);
 	while (ptypes != NULL && ptypes[i] != '\0')
 	{
 		func_ptr = get_parser_func(ptypes[i]);
-		if (func_ptr != NULL && func_ptr(apptr) == 0 && ptypes[i + 1] != '\0')
+		if (func_ptr != NULL && func_ptr(apptr) && ptypes[i + 1] != '\0')
 		{
 			printf(", ");
 		}
@@ -34,7 +34,7 @@ void print_all(char *ptypes, ...)
  *
  * Return: a pointer to the function you want to use.
  */
-int (*get_parser_func(char s))(va_list *ap)
+void (*get_parser_func(char s))(va_list *ap)
 {
 	parser_t parser[] = {
 		{"c", print_char},
@@ -57,10 +57,9 @@ int (*get_parser_func(char s))(va_list *ap)
  * @ap: va_list to read
  */
 
-int print_char(va_list *ap)
+void print_char(va_list *ap)
 {
 	printf("%c", va_arg(*ap, int));
-	return (0);
 }
 
 /**
@@ -68,10 +67,9 @@ int print_char(va_list *ap)
  * @ap: va_list to read
  */
 
-int print_int(va_list *ap)
+void print_int(va_list *ap)
 {
 	printf("%d", va_arg(*ap, int));
-	return (0);
 }
 
 /**
@@ -79,10 +77,9 @@ int print_int(va_list *ap)
  * @ap: va_list to read
  */
 
-int print_float(va_list *ap)
+void print_float(va_list *ap)
 {
 	printf("%f", va_arg(*ap, double));
-	return (0);
 }
 
 /**
@@ -90,13 +87,12 @@ int print_float(va_list *ap)
  * @ap: va_list to read
  */
 
-int print_string(va_list *ap)
+void print_string(va_list *ap)
 {
 	char *str = va_arg(*ap, char *);
 
 	if (str == NULL)
 		str = "(nil)";
 	printf("%s", str);
-	return (0);
 }
 
