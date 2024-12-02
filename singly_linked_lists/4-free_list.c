@@ -11,11 +11,13 @@ void free_list(list_t *node)
 		return;
 	if (!node->next)
 	{
-		free(node->str);
+		if (node->str)
+			free(node->str);
 		free(node);
 		return;
 	}
 	free_list(node->next);
-	free(node->str);
+	if (node->str)
+		free(node->str);
 	free(node);
 }
