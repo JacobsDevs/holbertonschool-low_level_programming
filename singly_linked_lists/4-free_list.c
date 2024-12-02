@@ -15,7 +15,7 @@ void free_list(list_t *node)
 		free(node);
 		return;
 	}
-	clean_up_list(node->next);
+	free_list(node->next);
 	free(node->str);
 	free(node);
 }
