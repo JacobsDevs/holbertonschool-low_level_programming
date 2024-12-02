@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * free_list - recursively frees the linked list
  * @node: pointer to the start of the list

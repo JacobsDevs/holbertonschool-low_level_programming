@@ -16,11 +16,9 @@ int print_list(list_t *head)
 	while (current != NULL)
 	{
 		if (current->str == NULL)
-		{
-			current->str = "(nil)";
-			current->len = 0;
-		}
-		printf("[%d] %s\n", current->len, current->str);
+			printf("[0] (nil)\n");
+		else
+			printf("[%d] %s\n", current->len, current->str);
 		current = current->next;
 		i++;
 	}

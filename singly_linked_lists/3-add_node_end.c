@@ -24,15 +24,15 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	temp->next = NULL;
 	if (str == NULL)
-		temp->str = strdup("(nil)");
+		temp->str = NULL;
 	else
 		temp->str = strdup(str);
-	if (temp->str == NULL)
+	if (str != NULL && temp->str == NULL)
 	{
 		clean_up_list(temp);
 		return (NULL);
 	}
-	while (temp->str[len] != '\0')
+	while (str != NULL && temp->str[len] != '\0')
 		len++;
 	if (str == NULL)
 		temp->len = 0;
@@ -60,11 +60,13 @@ void clean_up_list(list_t *node)
 		return;
 	if (!node->next)
 	{
-		free(node->str);
+		if (node->str != NULL)
+			free(node->str);
 		free(node);
 		return;
 	}
 	clean_up_list(node->next);
-	free(node->str);
+	if (node->str != NULL)
+		free(node->str);
 	free(node);
 }
