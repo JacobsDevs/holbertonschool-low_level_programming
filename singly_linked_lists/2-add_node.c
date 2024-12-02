@@ -41,6 +41,8 @@ list_t *add_node(list_t **head, const char *str)
 
 void clean_up_list(list_t *node)
 {
+	if (node == NULL)
+		return;
 	if (!node->next)
 	{
 		free(node->str);
