@@ -4,7 +4,7 @@
 /**
 * print_list - prints each item in the linked list and returns the list length
 * @head: the head of the linked list to print
-* 
+*
 * Return: The length of the list
 */
 
