@@ -23,7 +23,10 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	temp->next = NULL;
-	temp->str = strdup(str);
+	if (str == NULL)
+		temp->str = strdup("(nil)");
+	else
+		temp->str = strdup(str);
 	if (temp->str == NULL)
 	{
 		clean_up_list(temp);
@@ -31,7 +34,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	while (temp->str[len] != '\0')
 		len++;
-	temp->len = len;
+	if (str == NULL)
+		temp->len = 0;
+	else
+		temp->len = len;
 	if (trav == NULL)
 	{
 		*head = temp;
