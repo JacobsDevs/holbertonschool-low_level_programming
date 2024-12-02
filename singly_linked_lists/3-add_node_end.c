@@ -35,7 +35,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (trav == NULL)
 	{
 		*head = temp;
-		return(temp);
+		return (temp);
 	}
 	while (trav == NULL || trav->next != NULL)
 		trav = trav->next;
