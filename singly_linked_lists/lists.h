@@ -17,5 +17,6 @@ typedef struct list_s
 } list_t;
 
 int print_list(list_t *head);
+int list_len(const list_t *h);
 
 #endif
