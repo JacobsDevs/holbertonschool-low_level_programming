@@ -23,7 +23,7 @@ list_t *add_node(list_t **head, const char *str)
 	temp->str = strdup(str);
 	if (temp->str == NULL)
 	{
-		clean_up_list(*head);
+		clean_up_list(temp);
 		return (NULL);
 	}
 	while (temp->str[len] != '\0')
