@@ -18,8 +18,14 @@ list_t *add_node(list_t **head, const char *str)
 	if (temp == NULL)
 	{
 		clean_up_list(*head);
+		return (NULL);
 	}
 	temp->str = strdup(str);
+	if (temp->str == NULL)
+	{
+		clean_up_list(*head);
+		return (NULL);
+	}
 	while (temp->str[len] != '\0')
 		len++;
 	temp->len = len;
@@ -30,16 +36,18 @@ list_t *add_node(list_t **head, const char *str)
 
 /**
  * clean_up_list - recursively frees the linked list
- * @head: pointer to the start of the list
+ * @node: pointer to the start of the list
  */
 
 void clean_up_list(list_t *node)
 {
-	if (node->next == NULL)
+	if (!node->next)
 	{
+		free(node->str);
 		free(node);
 		return;
 	}
 	clean_up_list(node->next);
+	free(node->str);
 	free(node);
 }
