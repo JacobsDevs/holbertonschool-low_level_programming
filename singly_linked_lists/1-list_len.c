@@ -10,7 +10,7 @@
 
 int list_len(const list_t *h)
 {
-	list_t *next;
+	list_t *next = NULL;
 	int i = 0;
 
 	if (h != NULL)
