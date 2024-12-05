@@ -3,7 +3,7 @@
 void print_binary(unsigned long int n)
 {
 	int padded = 1;
-	int c = 64;
+	int c = 63;
 
 	while (c >= 0)
 	{
