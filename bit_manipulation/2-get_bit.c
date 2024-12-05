@@ -20,7 +20,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	while (i < 64)
 	{
 		int result = n >> (63 - i);
-		
+
 		if (result & 1)
 		{
 			num[i] = '1';
