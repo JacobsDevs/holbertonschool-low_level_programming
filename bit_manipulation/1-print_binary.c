@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_binary - Uses bitwise shifting and the & operator to print a decimal
+ * number in binary in 64-bit.
+ * @n: The decimal number to print.
+ */
 void print_binary(unsigned long int n)
 {
 	int padded = 1;
@@ -8,6 +13,7 @@ void print_binary(unsigned long int n)
 	while (c >= 0)
 	{
 		int result = n >> c;
+
 		if (result & 1)
 		{
 			_putchar('1');
