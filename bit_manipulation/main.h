@@ -6,6 +6,7 @@ unsigned int convert_binary(const char *s, unsigned int count, int len);
 int power(int base, int exp);
 void print_binary(unsigned long int n);
 int _putchar(char c);
+int get_bit(unsigned long int n, unsigned int index);
 
 #endif
 
