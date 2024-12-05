@@ -15,7 +15,8 @@ int get_bit(unsigned long int n, unsigned int index)
 	char *num = malloc(sizeof(char) * 64);
 	unsigned int i = 0;
 
-	(void)index;
+	if (index > 63)
+		return (-1);
 	while (i < 64)
 	{
 		int result = n >> (63 - i);
