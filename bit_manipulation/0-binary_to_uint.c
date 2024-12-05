@@ -36,10 +36,15 @@ unsigned int convert_binary(const char *s, unsigned int count, int len)
 {
 	unsigned int sum = 0;
 	char curr = s[len];
-	int current = atoi(&curr);
+	int current;
 	int pow = power(2, count);
-	int converted = current * pow;
+	int converted;
 
+	if (curr == '1')
+		current = 1;
+	else
+		current = 0;
+	converted = current * pow;
 	if (len == 0)
 		return (converted);
 	sum += convert_binary(s, count + 1, len - 1) + converted;
