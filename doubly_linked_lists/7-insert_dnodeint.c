@@ -17,7 +17,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *new;
 
 	if (*h == NULL || idx == 0)
-		add_dnodeint(h, n);
+	{
+		new = add_dnodeint(h, n);
+		return (new);
+	}
 	while (trav != NULL && i < idx)
 	{
 		trav = trav->next;
