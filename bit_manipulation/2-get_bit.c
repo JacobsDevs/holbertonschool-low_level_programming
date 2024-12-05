@@ -19,7 +19,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	while (i < 64)
 	{
 		int result = n >> (63 - i);
-
+		
 		if (result & 1)
 		{
 			num[i] = '1';
@@ -30,7 +30,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		}
 		i++;
 	}
-	if (num[i - index] == 48)
+	if (num[i - (index + 1)] == 49)
 		return (1);
 	else
 		return (0);
