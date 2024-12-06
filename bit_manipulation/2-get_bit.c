@@ -12,7 +12,8 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	char *num = malloc(sizeof(char) * 64);
+	return (n >> index & 1);
+/*	char *num = malloc(sizeof(char) * 64);
 	unsigned int i = 0;
 
 	if (index > 63)
@@ -34,6 +35,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (num[i - (index + 1)] == 49)
 		return (1);
 	else
-		return (0);
+		return (0);*/
 }
 
